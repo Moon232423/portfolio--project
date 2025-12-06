@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MD AL AMIN — Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Go to homepage">
+        <h1 class="name">MD AL AMIN</h1>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="burger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / PROFILE -->
+    <section id="profile" class="hero" aria-labelledby="profile-heading">
+      <div class="container hero-inner">
+        <figure class="profile-figure">
+          <img src="images/moon.jpeg" alt="Portrait of MD AL AMIN" class="profile-img" />
+          <figcaption class="profile-caption">Frontend & Security Enthusiast</figcaption>
+        </figure>
+
+        <div class="hero-content">
+          <h2 id="profile-heading" class="hero-title">Hi — I’m <span class="hover-black">MD AL AMIN</span></h2>
+          <p class="hero-intro">
+            I build polished web apps, study AI & security, and craft seamless user experiences.
+            I focus on React, clean CSS, and practical security techniques for real-world apps.
+          </p>
+          <p class="hero-cta">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn ghost">Get in touch</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about container" aria-labelledby="about-heading">
+      <h3 id="about-heading" class="section-title">About</h3>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm an aspiring AI engineer and web developer who loves combining visual design with secure, maintainable code. I enjoy building interactive UIs, optimizing performance, and learning offensive & defensive security techniques.</p>
+          <ul class="skills">
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript & React</li>
+            <li>Python & Machine Learning basics</li>
+            <li>Web Penetration Testing fundamentals</li>
+          </ul>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <strong>7+</strong>
+            <span>Months learning plan</span>
+          </div>
+          <div class="stat">
+            <strong>10+</strong>
+            <span>Projects (personal / practice)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects container" aria-labelledby="projects-heading">
+      <h3 id="projects-heading" class="section-title">Selected Projects</h3>
+
+      <div class="projects-row">
+        <!-- Each card is a Flexbox item -->
+        <article class="project-card">
+          <div class="project-media" role="img" aria-label="Smart Watch screenshot">
+            <!-- fake placeholder; replace later with real images -->
+            <div class="media-placeholder">Smart Watch</div>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Perfect Fit UI</h4>
+            <p class="project-desc">A responsive product gallery with pixel-perfect cards and cart interactions using vanilla JS and modern CSS.</p>
+            <p class="project-tags">HTML • CSS • JS</p>
+            <a class="project-link" href="#" aria-label="Open project Perfect Fit UI">Live →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" role="img" aria-label="Headphone screenshot">
+            <div class="media-placeholder">Headphone</div>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Audio Store UI</h4>
+            <p class="project-desc">Elegant product listing with fixed images and dynamic cart size — focuses on layout & accessibility.</p>
+            <p class="project-tags">React • CSS Grid</p>
+            <a class="project-link" href="#" aria-label="Open project Audio Store UI">Live →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media" role="img" aria-label="Security dashboard screenshot">
+            <div class="media-placeholder">Security</div>
+          </div>
+          <div class="project-body">
+            <h4 class="project-title">Security Dashboard</h4>
+            <p class="project-desc">Dashboard concept for monitoring alerts, integrated with charts and audit logs (mock data).</p>
+            <p class="project-tags">Django • JS • Charts</p>
+            <a class="project-link" href="#" aria-label="Open project Security Dashboard">Live →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER-LEVEL -->
+    <section id="contact" class="contact container" aria-labelledby="contact-heading">
+      <h3 id="contact-heading" class="section-title">Contact</h3>
+      <p>Want to collaborate or have a question? Email me at <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MD AL AMIN — Built with care • Designed for readability</p>
+      <ul class="social">
+        <li><a href="#" aria-label="GitHub">GitHub</a></li>
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // small JS for toggling mobile nav + current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+      navToggle.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
